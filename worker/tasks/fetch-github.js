@@ -20,23 +20,18 @@ async function fetchGithub() {
     onPage++;
   }
 
-  const jrJobs = allJobs.filter(job => {
+  const cloudJobs = allJobs.filter(job => {
     const jobTitle = job.title.toLowerCase();
-    if (
-      jobTitle.includes("senior") ||
-      jobTitle.includes("manager") ||
-      jobTitle.includes("sr.") ||
-      jobTitle.includes("architect")
-    ) {
+    if (jobTitle.includes("cloud") || jobTitle.includes("aws")) {
       return false;
     }
     return true;
   });
 
-  console.log("Filtered down to " + jrJobs.length + " jobs.");
+  console.log("Filtered down to " + cloudJobs.length + " jobs.");
 
   console.log("Found a total of " + allJobs.length + " jobs");
-  const success = await setAsync("github", JSON.stringify(jrJobs));
+  const success = await setAsync("github", JSON.stringify(cloudJobs));
   console.log(success);
 }
 
