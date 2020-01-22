@@ -6,7 +6,9 @@ import Job from "./Job";
 export default function Jobs({ jobs }) {
   return (
     <div className="jobs">
-      <Typography variant="h1">Entry Level Software Jobs</Typography>
+      <Typography variant="h4" component="h1">
+        Cloud Related Jobs
+      </Typography>
       {jobs.map(job => (
         <Job job={job} />
       ))}
