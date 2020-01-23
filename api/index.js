@@ -12,7 +12,7 @@ var redis = require("redis"),
 const { promisify } = require("util");
 const getAsync = promisify(client.get).bind(client);
 
-app.get("/jobs", cors(corsOptions), async function(req, res) {
+app.get("/api/jobs", cors(corsOptions), async function(req, res) {
   const jobs = await getAsync("github");
   res.header();
   return res.send(jobs);

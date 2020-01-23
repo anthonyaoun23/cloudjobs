@@ -12,11 +12,20 @@ body {
   padding: 20px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.job:hover {
+  cursor: pointer;
+  color: #555555;
+}
+
+.job-company {
+  padding: 0 30px;
+}
+
+.job-dialog {
+  padding: 30px 50px;
+}
+
+.modal-logo {
+  height: 30px;
+  float: right;
 }
